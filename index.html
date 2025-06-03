@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <script type="module" src="./src/js/controller.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <section class="weather-app">
+      <div class="search-box">
+        <input
+          type="text"
+          name=""
+          id=""
+          class="search-box--entry"
+          placeholder="City name"
+        />
+        <div class="search-box--reset">
+          <i class="ph ph-repeat"></i>
+        </div>
+      </div>
+      <div class="main-box">
+        <div class="main-box--temp">
+          <i class="ph ph-cloud-sun"></i>
+          <span class="temp">29 C</span>
+        </div>
+      </div>
+      <div class="info-box">
+        <div class="info-box--pressure">
+          <span class="pressure-icon">
+            <i class="ph ph-meteor"></i>
+          </span>
+          <span class="pressure-info">35</span>
+        </div>
+        <div class="info-box--wind">
+          <span class="wind-icon">
+            <i class="ph ph-wind"></i>
+          </span>
+          <span class="wind-info">8 km/h</span>
+        </div>
+        <div class="info-box--humid">
+          <span class="humid-icon">
+            <i class="ph ph-drop-simple"></i>
+          </span>
+          <span class="humid-info">59%</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

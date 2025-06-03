@@ -1,0 +1,111 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", sans-serif;
+  line-height: 1;
+  font-weight: 300;
+
+  background-image: url("/src/img/background.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* LAYOUT */
+
+.weather-app {
+  backdrop-filter: blur(80px);
+  margin-block: 10rem;
+  margin-inline: 46rem;
+  padding: 6.4rem;
+  border-radius: 0.4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 12rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "search-box search-box search-box"
+    "main-box main-box main-box"
+    "info-box info-box info-box";
+}
+
+.search-box {
+  grid-area: search-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-box {
+  grid-area: main-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.info-box {
+  grid-area: info-box;
+  display: flex;
+  justify-content: center;
+  gap: 12.8rem;
+}
+
+.search-box--entry {
+  width: 30rem;
+  height: 3.2rem;
+  padding-inline: 1rem;
+}
+
+.ph-repeat {
+  font-size: 4.8rem;
+}
+
+.main-box--temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.ph-cloud-sun {
+  font-size: 12.8rem;
+}
+
+.temp {
+  font-size: 9.6rem;
+}
+
+.info-box--pressure,
+.info-box--wind,
+.info-box--humid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pressure-icon,
+.wind-icon,
+.humid-icon {
+  font-size: 6.4rem;
+}
+
+.pressure-info,
+.wind-info,
+.humid-info {
+  font-size: 4.8rem;
+}
