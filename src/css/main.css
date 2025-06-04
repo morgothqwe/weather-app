@@ -27,14 +27,14 @@ body {
 
 .weather-app {
   backdrop-filter: blur(80px);
-  margin-block: 10rem;
+  margin-block: 6rem;
   margin-inline: 46rem;
-  padding: 6.4rem;
+  padding: 3.2rem;
   border-radius: 0.4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  row-gap: 12rem;
+  row-gap: 6.4rem;
   grid-auto-flow: row;
   grid-template-areas:
     "search-box search-box search-box"
@@ -45,6 +45,7 @@ body {
 .search-box {
   grid-area: search-box;
   display: flex;
+  gap: 9.6rem;
   justify-content: space-around;
   align-items: center;
 }
@@ -61,7 +62,7 @@ body {
   grid-area: info-box;
   display: flex;
   justify-content: center;
-  gap: 12.8rem;
+  gap: 4.8rem;
 }
 
 .search-box--entry {
@@ -70,7 +71,11 @@ body {
   padding-inline: 1rem;
 }
 
-.ph-repeat {
+.search-box--submit {
+  cursor: pointer;
+}
+
+.repeat-outline {
   font-size: 4.8rem;
 }
 
@@ -81,7 +86,7 @@ body {
   gap: 4.8rem;
 }
 
-.ph-cloud-sun {
+.partly-sunny-outline {
   font-size: 12.8rem;
 }
 
