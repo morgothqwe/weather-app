@@ -1,14 +1,17 @@
 import * as model from "./model";
 import view from "./view";
 
-const controlCurrentCondition = async function () {
-  // city = "London";
-  const res = await model.weatherCondition();
-  // console.log(res);
+const controlSelectCity = async function (city) {
+  // const cityName = view.addHandlerSelectCity(city);
+  // view.renderWeather(cityName);
+  const data = await model.weatherCondition(city);
+  view.renderWeather(data);
 };
 
-const init = function () {
-  controlCurrentCondition();
+const init = async function () {
+  // await model.weatherCondition(controlSelectCity);
+  view.addHandlerSelectCity(controlSelectCity);
+  controlSelectCity("Isfahan");
 };
 
 init();
