@@ -5,11 +5,13 @@ export const weatherCondition = async function (city) {
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
   );
   const geoData = await geoResponse.json();
+  console.log(geoData);
 
   return {
     temperature: geoData.main.temp,
     humidity: geoData.main.humidity,
     pressure: geoData.main.pressure,
     wind: geoData.wind.speed,
+    weatherCondition: geoData.weather[0].main,
   };
 };
