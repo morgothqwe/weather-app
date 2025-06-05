@@ -72,6 +72,10 @@ body {
   padding-inline: 1rem;
 }
 
+.search-box--entry:focus {
+  outline-color: #25b09b;
+}
+
 .search-box--submit {
   cursor: pointer;
 }
