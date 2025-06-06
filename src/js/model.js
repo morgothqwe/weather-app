@@ -13,5 +13,6 @@ export const weatherCondition = async function (city) {
     pressure: geoData.main.pressure,
     wind: geoData.wind.speed,
     weatherCondition: geoData.weather[0].main,
+    name: geoData.name,
   };
 };

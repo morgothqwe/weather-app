@@ -2,6 +2,7 @@ class View {
   _submit = document.querySelector(".search-box--submit");
   _cityName = document.querySelector(".search-box--entry");
   _condition = document.querySelector(".main-box--icon");
+  _cityDisplay = document.querySelector(".main-box--city");
 
   _thunderMarkup =
     '<ion-icon name="thunderstorm-outline" class="main-box--icon"></ion-icon>';
@@ -39,6 +40,7 @@ class View {
     if (windElement) windElement.textContent = "";
     if (humidElement) humidElement.textContent = "";
     if (this._condition) this._condition.innerHTML = "";
+    if (this._cityDisplay) this._cityDisplay.textContent = "";
   }
 
   addHandlerSelectCity(handler) {
@@ -66,6 +68,7 @@ class View {
     this.clearSpinner();
     if (!data) return;
 
+    this._cityDisplay.textContent = `${data.name}`;
     const tempElement = document.querySelector(".temp");
     const pressureElement = document.querySelector(".pressure-info");
     const windElement = document.querySelector(".wind-info");
