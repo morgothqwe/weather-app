@@ -5,7 +5,13 @@ export const weatherCondition = async function (city) {
     const geoResponse = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
     );
+
+    if (!geoResponse) throw new Error(`${geoResponse.status}`);
+
     const geoData = await geoResponse.json();
+
+    if (!geoData || !geoData.weather || !geoData.main)
+      throw new Error("Incomplete data received.");
 
     return {
       temperature: geoData.main.temp,
@@ -15,7 +21,7 @@ export const weatherCondition = async function (city) {
       weatherCondition: geoData.weather[0].main,
       name: geoData.name,
     };
-  } catch (error) {
-    console.log(`${error}: Please try again!`);
+  } catch (err) {
+    throw new Error(`Failed! ${err.message}`);
   }
 };

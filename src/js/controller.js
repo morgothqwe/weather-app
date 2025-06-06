@@ -7,7 +7,7 @@ const controlSelectCity = async function (city) {
     const data = await model.weatherCondition(city);
     view.renderWeather(data);
   } catch (err) {
-    console.log(`${err}: Please Try Again!`);
+    view.renderError(err.message);
   }
 };
 
