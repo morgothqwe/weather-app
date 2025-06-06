@@ -35,7 +35,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  row-gap: 6.4rem;
+  row-gap: 3.2rem;
   grid-auto-flow: row;
   grid-template-areas:
     "search-box search-box search-box"
@@ -81,6 +81,10 @@ body {
 
 .search-box--submit {
   cursor: pointer;
+}
+
+.arrow-forward-circle-outline:active {
+  color: #25b09b;
 }
 
 .arrow-forward-circle-outline {
